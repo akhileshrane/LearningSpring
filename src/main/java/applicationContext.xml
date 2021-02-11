@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+ 	<bean id="myCoach"
+ 		class="com.spring.ioc.FootballCoach">	 		
+ 	</bean>
+   
+    <bean id="baseballCoach"
+        class="com.spring.ioc.BaseballCoach">         
+    </bean>
+    
+    <bean id="myFortuneHelper"
+		class = "com.spring.di.FortuneHelper">
+	</bean>
+	
+	<bean id="myFortuneCoach"
+		class = "com.spring.di.FortuneCoach" >
+	<constructor-arg ref = "myFortuneHelper" />
+	</bean>
+	
+	<bean id="myFortuneCookie"
+		class = "com.spring.di.FortuneCookieSI" >
+	<property name = "fortuneHelper"  ref = "myFortuneHelper" />
+	<property name = "fortuneGiver"  value = "Akhilesh Rane" />
+	<property name = "fortuneGiverID"  value = "51" />
+	</bean>
+	
+	
+</beans>
+
+
+
+
+
