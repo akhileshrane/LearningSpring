@@ -35,12 +35,20 @@
 	</bean>
 	
 	<bean id="singleton"
- 		class="com.spring.scopes.Singleton" scope= "singleton">
+ 		class="com.spring.scopes.Singleton" scope= "singleton" 
+ 		destroy-method  = "cleanupOnAisleN" >
  			 		
  	</bean>
  	
  	<bean id="prototype"
- 		class="com.spring.scopes.Prototype" scope= "prototype" >	 		
+ 		class="com.spring.scopes.Prototype" scope= "prototype"
+ 		init-method = "myInitMethod" 
+ 		destroy-method  = "cleanupOnAisleN" >	 	
+		<!--  Destroy method is not called for beans of scope prototype.
+		 This is because the context doesn't keep track of the prototype scope objects
+		 (if it does, it will cause a memory leak as spring doesn't know when to dispose it).
+		 destroy-method can be called using a custom Bean Processor to keep track
+		 and having the prototype class implement DisposableBean  -->
  	</bean>
  	
  	

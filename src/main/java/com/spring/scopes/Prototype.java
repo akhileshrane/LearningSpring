@@ -17,4 +17,15 @@ public class Prototype {
 		this.name = name;
 	}
 	
+	
+	//init method
+	public void myInitMethod() {
+		System.out.println("Initizaling ..");
+	}
+	
+
+	//pre destroy method
+	public void cleanupOnAisleN() {
+		System.out.println("Destroying ..");
+	}
 }

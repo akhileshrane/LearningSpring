@@ -17,5 +17,7 @@ public class Singleton {
 		this.name = name;
 	}
 	
-	
+	public void cleanupOnAisleN() {
+		System.out.println("Destroying ..");
+	}
 }
