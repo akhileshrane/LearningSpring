@@ -35,7 +35,7 @@ public class FortuneCookieSI implements Fortune {
 
 
 	public void setFortuneHelper(FortuneHelper fortuneHelper) {
-		System.out.println("Inside setter method");
+		System.out.println("Inside setter method for setting fortune helper");
 		this.fortuneHelper = fortuneHelper;
 	}
 

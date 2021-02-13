@@ -34,7 +34,16 @@
 	<property name = "fortuneGiverID"  value = "51" />
 	</bean>
 	
-	
+	<bean id="singleton"
+ 		class="com.spring.scopes.Singleton" scope= "singleton">
+ 			 		
+ 	</bean>
+ 	
+ 	<bean id="prototype"
+ 		class="com.spring.scopes.Prototype" scope= "prototype" >	 		
+ 	</bean>
+ 	
+ 	
 </beans>
 
 
