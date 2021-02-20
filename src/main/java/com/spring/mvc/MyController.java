@@ -5,9 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class MyController {
+//@RequestMapping("/customParentFolder") //when you need to have the same RequestMapping URL for two controllers
+public class MyController { 
 
 	@RequestMapping("/") 
 	public String showPage() {
@@ -36,5 +38,15 @@ public class MyController {
 		return "shouting-it-out";
 	}
 	
+	@RequestMapping("/shoutV2")
+	public String letsShoutUsingReqParam(@RequestParam("shoutversion2") String theName, Model model) {
+		theName = theName.toUpperCase();
+		
+		String result = "Hello, " + theName;
+		
+		model.addAttribute("message", result);
+		
+		return "shouting-it-out";
+	}
 	
 }	
