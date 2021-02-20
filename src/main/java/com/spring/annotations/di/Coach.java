@@ -1,4 +1,4 @@
-package com.spring.annotations.noxml;
+package com.spring.annotations.di;
 
 public interface Coach {
 	public int performWorkout();

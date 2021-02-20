@@ -1,0 +1,2 @@
+foo.email=name@provider.com
+foo.name=sampleName

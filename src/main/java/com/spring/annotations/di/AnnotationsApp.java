@@ -1,4 +1,4 @@
-package com.spring.annotations.noxml;
+package com.spring.annotations.di;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

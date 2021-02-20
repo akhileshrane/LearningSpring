@@ -1,11 +1,20 @@
-package com.spring.annotations.noxml;
+package com.spring.annotations.di;
 
 import java.util.Random;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.springframework.stereotype.Component;
 
 @Component
+//@Scope("singleton") @Scope("prototype")
 public class FortuneHelperRandom implements FortuneService {
+	
+	@PostConstruct
+	public void runAfterConstruction() {
+		System.out.println("Running Random Fortune Helper");
+	}
 	
 	private String[] fortunes = {
 			"A beautiful, smart, and loving person will be coming into your life.",
@@ -24,5 +33,11 @@ public class FortuneHelperRandom implements FortuneService {
 		String fortune = fortunes[index];
 		return fortune;
 	}
+	
 
+	@PreDestroy
+	public void runBeforeBeanDestruction() {
+		System.out.println("Closing Random Fortune Helper");
+	}
+	
 }
