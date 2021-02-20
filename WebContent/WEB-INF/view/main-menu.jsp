@@ -6,5 +6,7 @@
 </head>
 <body>
 <h2>Welcome !</h2>
+<br>
+<a href= "enterName"> Click here </a>
 </body>
 </html>
