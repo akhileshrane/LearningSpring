@@ -7,6 +7,7 @@
 <body>
 <h2>Welcome !</h2>
 <br>
-<a href= "enterName"> Click here </a>
+<a href= "enterName"> Click here </a> <br>
+<a href= "student/showForm"> Click here to register</a>
 </body>
 </html>

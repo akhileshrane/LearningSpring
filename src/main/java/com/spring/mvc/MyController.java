@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-//@RequestMapping("/customParentFolder") //when you need to have the same RequestMapping URL for two controllers
 public class MyController { 
 
 	@RequestMapping("/") 
